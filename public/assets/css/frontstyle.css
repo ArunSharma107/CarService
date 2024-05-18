@@ -1,0 +1,270 @@
+/* importing google fonts */
+/* 1. Goldman */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+/* declaring super global variables */
+:root {
+    --primarycolor: gray;
+    --secondarycolor: pink;
+    --tertiarycolor: aliceblue;
+    --backgroundprimarycolor: rgb(53, 212, 219);
+    --backgroundsecondarycolor: rgba(0, 0, 0, 0.2);
+    --backgroundtertiarycolor: white;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.indexnav {
+    background-color: var(--backgroundtertiarycolor);
+    box-shadow: 2px 2px 1px var(--backgroundsecondarycolor) ;
+}
+.indexnav .logo{
+    width: 50px;
+    height: 50px;
+}
+
+
+/* hero section styling*/
+.hero-section {
+    /* background: url("/assets/images/backgrounds/bg1.jpeg"); */
+    background: url("../images/backgrounds/car_bg01.jpg");
+    min-height: 60vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-heading {
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+.feature-section{
+    border: 2x solid red;
+}
+
+/* section title styling */
+.section_title .title_text {
+    line-height: 1;
+    font-size: 35px;
+    font-family: "Goldman", sans-serif;
+}
+
+.section_title .title_text span {
+    padding: 0px 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section_title .title_text span:before,
+.section_title .title_text span:after {
+    top: 50%;
+    width: 20px;
+    height: 8px;
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transform: translateY(-50%);
+    background-color: #EA001E;
+}
+
+.section_title .title_text span:before {
+    left: 0px;
+}
+
+.section_title .title_text span:after {
+    right: 0px;
+}
+
+.feature-country button{
+    border-style: none;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-country{
+    border: 1px solid var(--backgroundsecondarycolor);
+    background-color: var(--backgroundtertiarycolor);
+    box-shadow: 5px 5px 2px var(--backgroundsecondarycolor);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    
+}
+.country-img-container{
+    width: 10%;
+    
+}
+.country-name{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: row;
+    margin-left: 10px;
+}
+.feature-country img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.states-name-dropdown-menu{
+  border-radius: 10px;
+  margin-top: 10px !important;
+  border-radius: 20px !important;
+}
+.state-name{
+    margin-left: 10px;
+}
+.state-img{
+    width: 60px;
+    height: 50px;
+    border-radius: 10%;
+}
+
+/*================================================================
+============= featured city page styling =========================
+=================================================================*/
+.search-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+
+}
+
+#searchBtn{
+     margin-left: -40px;
+     border-style: none;
+}
+
+#searchBtn:hover{
+    color: blue;
+}
+#searchBar{
+    box-shadow: 5px 5px 2px var(--backgroundsecondarycolor);
+}
+ 
+.city-select{
+    margin-top: 40px;
+}
+ 
+.swiper{
+    
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px !important;
+}
+
+.swiper-slide img {
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-slide img:hover{
+    border: 2px solid var(--backgroundtertiarycolor);
+    opacity: 90%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .swiper-slide{
+        height: 120px !important;
+        width: 100% !important;
+    }
+}
+/* Small devices (portrait tablets and large phones, 800px and up) */
+@media only screen and (max-width: 800px) {
+    .swiper-slide{
+        height: 150px !important;
+        width: 100% !important;
+    }
+
+}
+
+
+ 
+.top-premium-car-section{
+    margin-top: 5rem;
+}
+.top-premium-cars-swiper{
+    margin-top: 5rem;
+}
+.card-title{
+    font-family: "Goldman", sans-serif;
+}
+.company-declaration-heading{
+    font-family: "Goldman", sans-serif;
+}
+.carPrice{
+    display: inline;
+    position: relative;
+    top: -40px;
+    left: 70%;
+}
+
+.top-premium-car-card img{
+    height: 356px;
+    width: 100%;
+    max-height: 100%;
+} 
+#car-address-img{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+.contact-owner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*================================================================
+============= User signin form styling =========================
+=================================================================*/
+.user-signin-form{
+    height: 100vh;
+    border: 1px solid green;
+    
+}
+.signinform{
+    border: 1px solid red;
+    padding: 2rem;
+ 
+}
+ 
+
+ 
+/*================================================================
+============= footer section styling =========================
+=================================================================*/
+
+.footer-copyright{
+    background-color: var(--backgroundsecondarycolor);
+}
+
+
