@@ -1,0 +1,60 @@
+CRITICAL - 2024-05-19 07:11:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "featured_city.php"
+[Method: GET, Route: city]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('featured_city.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('featured_city', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('featured_city')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->featuredCity()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-19 14:53:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "featured_city.php"
+[Method: GET, Route: city]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('featured_city.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('featured_city', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('featured_city')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->featuredCity()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-19 15:25:57 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: city]
+in APPPATH\Views\featured_city.php on line 276.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('featured_city', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('featured_city')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->featuredCity()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-19 15:26:08 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: city]
+in APPPATH\Views\featured_city.php on line 276.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('featured_city', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('featured_city')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->featuredCity()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-19 15:48:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "featured_city.php"
+[Method: GET, Route: city]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('featured_city.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('featured_city', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('featured_city')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->featuredCity()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

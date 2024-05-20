@@ -1,16 +1,19 @@
 /* importing google fonts */
 /* 1. Goldman */
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+/* 2. Lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* declaring super global variables */
 :root {
     --primarycolor: gray;
-    --secondarycolor: pink;
-    --tertiarycolor: aliceblue;
-    --backgroundprimarycolor: rgb(53, 212, 219);
-    --backgroundsecondarycolor: rgba(0, 0, 0, 0.2);
-    --backgroundtertiarycolor: white;
-
+    --secondarycolor: white;
+    --tertiarycolor: #ea001e;
+    --quaternarycolor: rgb(0,0,0,);
+    --bgprimary: rgb(80, 198, 212);
+    --bgsecondary: rgb(4, 175, 185);
+    --bgtertiary: rgb(73, 194, 203);
+    --bgquaternary: rgba(0,0,0,0.2);
 }
 
 * {
@@ -21,11 +24,17 @@
 
 body {
     overflow-x: hidden;
+    color: #777 !important;
+	font-size: 16px;
+    font-weight: 400 !important;
+	line-height: 18px;
+	background-color: #ffffff !important;
+    font-family: "Lato", sans-serif !important;
 }
 
 .indexnav {
-    background-color: var(--backgroundtertiarycolor);
-    box-shadow: 2px 2px 1px var(--backgroundsecondarycolor) ;
+    background-color: var(--secondarycolor);
+    box-shadow: 2px 2px 2px var(--bgquaternary) ;
 }
 .indexnav .logo{
     width: 50px;
@@ -35,7 +44,6 @@ body {
 
 /* hero section styling*/
 .hero-section {
-    /* background: url("/assets/images/backgrounds/bg1.jpeg"); */
     background: url("../images/backgrounds/car_bg01.jpg");
     min-height: 60vh;
     background-size: cover;
@@ -45,7 +53,7 @@ body {
 }
 
 .hero-heading {
-    color: rgba(0, 0, 0, 1);
+    color: var(--quaternarycolor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +63,7 @@ body {
     font-size: 40px;
 }
 .feature-section{
-    border: 2x solid red;
+    border: 2x solid var(--bgprimary);
 }
 
 /* section title styling */
@@ -80,7 +88,7 @@ body {
     position: absolute;
     display: inline-block;
     transform: translateY(-50%);
-    background-color: #EA001E;
+    background-color: var(--tertiarycolor);
 }
 
 .section_title .title_text span:before {
@@ -99,16 +107,15 @@ body {
     align-items: center;
 }
 .feature-country{
-    border: 1px solid var(--backgroundsecondarycolor);
-    background-color: var(--backgroundtertiarycolor);
-    box-shadow: 5px 5px 2px var(--backgroundsecondarycolor);
+    border: 1px solid var(--bgquaternary);
+    background-color: var(--secondarycolor);
+    box-shadow: 5px 5px 2px var(--bgquaternary);
     border-radius: 20px;
     margin-bottom: 20px;
     
 }
 .country-img-container{
-    width: 10%;
-    
+    width: 10%;   
 }
 .country-name{
     width: 90%;
@@ -139,32 +146,54 @@ body {
 /*================================================================
 ============= featured city page styling =========================
 =================================================================*/
+.hero-section-featured-city {
+    background: url("../images/backgrounds/car_bg02.jpg");
+    min-height: 60vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .search-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
-
 }
 
 #searchBtn{
-     margin-left: -40px;
+     margin-left: -50px;
      border-style: none;
 }
+ 
+
+#srchBtn{
+    border: 1px solid var(--primarycolor);     
+}
+
 
 #searchBtn:hover{
-    color: blue;
+    color: var(--bgsecondary);
 }
 #searchBar{
-    box-shadow: 5px 5px 2px var(--backgroundsecondarycolor);
+    box-shadow: 5px 5px 2px var(--bgquaternary);
+
+}
+ 
+.search-key{
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid var(--bgquaternary);
+}
+
+.search-key:hover{
+    border : 2px solid var(--bgprimary);
 }
  
 .city-select{
     margin-top: 40px;
 }
  
-.swiper{
-    
+.swiper{   
     width: 100%;
     height: 100%;
 }
@@ -185,7 +214,7 @@ body {
     object-fit: cover;
 }
 .swiper-slide img:hover{
-    border: 2px solid var(--backgroundtertiarycolor);
+    border: 2px solid var(--bgprimary);
     opacity: 90%;
 }
 
@@ -205,12 +234,31 @@ body {
 
 }
 
-
- 
-.top-premium-car-section{
-    margin-top: 5rem;
+.topPremiumCarSwiper{
+    width: 100%;
+    height: 30rem;
 }
-.top-premium-cars-swiper{
+
+.card-img-top{
+    max-height: 15rem !important;
+}
+
+.top-premium-car-card{
+    border: 1px solid var(--bgprimary) !important;
+}
+.card-text{
+    color: #777 !important;
+	font-size: 16px;
+    font-weight: 300 !important;
+	line-height: 18px;
+	background-color: #ffffff !important;
+    font-family: "Lato", sans-serif !important;
+}
+ 
+.premium-car-section{
+    margin-top: 1rem;
+}
+.premium-cars-swiper{
     margin-top: 5rem;
 }
 .card-title{
@@ -219,14 +267,19 @@ body {
 .company-declaration-heading{
     font-family: "Goldman", sans-serif;
 }
-.carPrice{
+.carPrice, .carImages{
     display: inline;
     position: relative;
     top: -40px;
-    left: 70%;
+    left: 60%;
+}
+.premium-car-card{
+    max-height: 100% !important;
+    width: 100%;
+    border: 1px solid var(--bgprimary) !important;
 }
 
-.top-premium-car-card img{
+.premium-car-card img{
     height: 356px;
     width: 100%;
     max-height: 100%;
@@ -242,6 +295,31 @@ body {
     justify-content: flex-end;
     align-items: center;
 }
+ 
+.contact-owner .fa-whatsapp{
+    font-size: 20px;
+    color: lightgreen;
+    font-weight: 700;
+}
+.contact-owner .fa-phone{
+    font-size: 20px;
+    color: var(--primarycolor);
+}
+
+@media only screen and (min-width: 800px) {
+    .premium-car-card{
+        height: 356px !important;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .carPrice, .carImages{
+        left: 30%;
+    }
+}
+
+
 
 /*================================================================
 ============= User signin form styling =========================
@@ -264,7 +342,7 @@ body {
 =================================================================*/
 
 .footer-copyright{
-    background-color: var(--backgroundsecondarycolor);
+    background-color: var(--bgquaternary);
 }
 
 
