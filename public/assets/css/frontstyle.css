@@ -72,6 +72,11 @@ body {
     font-size: 35px;
     font-family: "Goldman", sans-serif;
 }
+.section_title .title_text_sm {
+    line-height: 1;
+    font-size: 20px;
+    font-family: "Goldman", sans-serif;
+}
 
 .section_title .title_text span {
     padding: 0px 40px;
@@ -192,6 +197,13 @@ body {
 .city-select{
     margin-top: 40px;
 }
+.topPremiumCarCard{
+    border: 1px solid var(--bgprimary) !important;
+}
+.topPremiumCarCard .col-md-3 img{
+    border-radius: 5%;
+    padding: 5px;
+}
  
 .swiper{   
     width: 100%;
@@ -231,6 +243,9 @@ body {
         height: 150px !important;
         width: 100% !important;
     }
+    .topPremiumCarCard .col-md-3{
+        margin-top: 5px;
+    }
 
 }
 
@@ -246,14 +261,14 @@ body {
 .top-premium-car-card{
     border: 1px solid var(--bgprimary) !important;
 }
-.card-text{
+/* .card-text{
     color: #777 !important;
 	font-size: 16px;
     font-weight: 300 !important;
 	line-height: 18px;
 	background-color: #ffffff !important;
     font-family: "Lato", sans-serif !important;
-}
+} */
  
 .premium-car-section{
     margin-top: 1rem;

@@ -1,54 +1,18 @@
-// window.onload = () => {
-//     const myModal = new bootstrap.Modal('#indexModal');
-//     myModal.show();
-// }
- 
- 
+// Accept policy modal opens evertime on window load
+window.onload = () => {
+    const myModal = new bootstrap.Modal('#indexModal');
+    myModal.show();
+}
 
-// search bar filter of featured city page
-let availableKeywords = [
-          'Maharashtra',
-          'Thane',
-          'Pune',
-          'Worli',
-          'South Delhi',
-          'Chandigarh',
-          'Abbosford',
-          'Bandra',
-          'Agartala',
-          'Agra',
-];
-
-const searchResult = document.querySelector('#searchResult');
+// search bar toggle dependent dropdown 
 const inputBox = document.getElementById('searchBar');
 const element = document.getElementById('dropdownSearch');
 
+inputBox.addEventListener("click", ()=>{
+  element.classList.remove('d-none');
+  inputBox.setAttribute('value', '');
 
-inputBox.onkeyup = function(){
-    let result = [];
-    let input = inputBox.value;
-
-    if(input.length) {
-      result = availableKeywords.filter((keyword)=>{
-         return keyword.toLowerCase().includes(input.toLowerCase());
-      });
-    display(result);
-    } 
-}
-
-function display(result){
-  const data = result.map((list)=>{
-    return '<span class="badge text-bg-light p-2 search-key" onclick=selectInput(this)>'+ list + '</span> ';
-  });
-  searchResult.innerHTML = data.join(' ');
-}
-
-function selectInput(list){
-  inputBox.value = list.innerHTML;
-  searchResult.innerHTML = '';
-  element.classList.remove('d-none'); 
-}
-
+});
 
 
 // initailising car swiper of featured city page
@@ -102,6 +66,6 @@ var swiper = new Swiper(".footerPremiumCarSwiper", {
     clickable: true,
   },
 });
-
+ 
 
  
