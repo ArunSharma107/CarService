@@ -16,4 +16,8 @@ class Home extends BaseController
     public function userSignin() {
         return view('user_signin');
     }
+
+    public function userSignup() {
+        return view('user_signup');
+    }
 }

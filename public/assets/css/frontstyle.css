@@ -3,17 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 /* 2. Lato */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* 3. Inter */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter:wght@100..900&display=swap');
 
 /* declaring super global variables */
 :root {
     --primarycolor: gray;
-    --secondarycolor: white;
+    --secondarycolor: rgb(255, 255, 255);
     --tertiarycolor: #ea001e;
-    --quaternarycolor: rgb(0,0,0,);
+    --quaternarycolor: rgba(0,0,0,0.8);
+    --quinarycolor: #be206b;
+    --senarycolor: #f5f8fa;
     --bgprimary: rgb(80, 198, 212);
     --bgsecondary: rgb(4, 175, 185);
     --bgtertiary: rgb(73, 194, 203);
-    --bgquaternary: rgba(0,0,0,0.2);
+    --bgquaternary: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -24,12 +28,12 @@
 
 body {
     overflow-x: hidden;
-    color: #777 !important;
+    /* color: #777 !important; */
 	font-size: 16px;
     font-weight: 400 !important;
 	line-height: 18px;
-	background-color: #ffffff !important;
-    font-family: "Lato", sans-serif !important;
+	background-color: var(--secondarycolor) !important;
+    font-family: "Inter", sans-serif !important;
 }
 
 .indexnav {
@@ -53,14 +57,19 @@ body {
 }
 
 .hero-heading {
-    color: var(--quaternarycolor);
+    color: var(--secondarycolor);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20vh;
     font-family: "Goldman", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 40px;
+}
+
+.subheading {
+    color: var(--secondarycolor);
+    font-weight: 600;
 }
 .feature-section{
     border: 2x solid var(--bgprimary);
@@ -70,12 +79,13 @@ body {
 .section_title .title_text {
     line-height: 1;
     font-size: 35px;
-    font-family: "Goldman", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
 }
 .section_title .title_text_sm {
     line-height: 1;
     font-size: 20px;
-    font-family: "Goldman", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .section_title .title_text span {
@@ -93,7 +103,7 @@ body {
     position: absolute;
     display: inline-block;
     transform: translateY(-50%);
-    background-color: var(--tertiarycolor);
+    background-color: var(--bgprimary);
 }
 
 .section_title .title_text span:before {
@@ -102,6 +112,9 @@ body {
 
 .section_title .title_text span:after {
     right: 0px;
+}
+.section_title .title_sub{
+    font-size: 25px !important;
 }
 
 .feature-country button{
@@ -147,12 +160,31 @@ body {
     height: 50px;
     border-radius: 10%;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .post-add-btn{
+        width: 160px;
+        padding: 0 !important;
+        font-size: 10px !important; 
+     }
+    .section_title .title_text {
+        line-height: 1;
+        font-size: 25px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+    }
+    .section_title .title_sub{
+        font-size: 20px !important;
+    }
+}
+
 
 /*================================================================
 ============= featured city page styling =========================
 =================================================================*/
 .hero-section-featured-city {
-    background: url("../images/backgrounds/car_bg02.jpg");
+    /* background: url("../images/backgrounds/bg1.jpeg"); */
+    background: var(--bgprimary);
     min-height: 60vh;
     background-size: cover;
     background-attachment: fixed;
@@ -169,16 +201,15 @@ body {
      margin-left: -50px;
      border-style: none;
 }
+#searchBtn .fa-search{
+    color: var(--bgsecondary);
+}
  
 
 #srchBtn{
-    border: 1px solid var(--primarycolor);     
+    border: 2px solid var(--primarycolor);     
 }
 
-
-#searchBtn:hover{
-    color: var(--bgsecondary);
-}
 #searchBar{
     box-shadow: 5px 5px 2px var(--bgquaternary);
 
@@ -193,6 +224,8 @@ body {
 .search-key:hover{
     border : 2px solid var(--bgprimary);
 }
+#floatingSelect,#dropdownSrcBar{font-size: 18px;}
+ 
  
 .city-select{
     margin-top: 40px;
@@ -215,7 +248,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px !important;
+    height: 140px !important;
 }
 
 .swiper-slide img {
@@ -226,8 +259,9 @@ body {
     object-fit: cover;
 }
 .swiper-slide img:hover{
-    border: 2px solid var(--bgprimary);
+    border: 5px solid var(--bgprimary);
     opacity: 90%;
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -249,10 +283,7 @@ body {
 
 }
 
-.topPremiumCarSwiper{
-    width: 100%;
-    height: 30rem;
-}
+ 
 
 .card-img-top{
     max-height: 15rem !important;
@@ -261,43 +292,52 @@ body {
 .top-premium-car-card{
     border: 1px solid var(--bgprimary) !important;
 }
-/* .card-text{
-    color: #777 !important;
-	font-size: 16px;
-    font-weight: 300 !important;
+.card-text{
+	font-size: 16px !important;
+    font-weight: 400 !important;
 	line-height: 18px;
-	background-color: #ffffff !important;
-    font-family: "Lato", sans-serif !important;
-} */
+	background-color: var(--secondarycolor) !important;
+    font-family: "Inter", sans-serif !important;
+}
  
-.premium-car-section{
+.exclusive-car-section{
     margin-top: 1rem;
 }
 .premium-cars-swiper{
     margin-top: 5rem;
 }
 .card-title{
-    font-family: "Goldman", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-size: 25px !important;
+    font-size: 600;
+}
+.card-title:hover{
+    cursor: pointer;
+    color: var(--bgprimary);
 }
 .company-declaration-heading{
     font-family: "Goldman", sans-serif;
 }
-.carPrice, .carImages{
+.carImages{
     display: inline;
     position: relative;
     top: -40px;
-    left: 60%;
+    left: 80%;
+}
+.img-container{
+    width: 100%;
+    height: 20rem;
 }
 .premium-car-card{
-    max-height: 100% !important;
+    height: 100%;
     width: 100%;
     border: 1px solid var(--bgprimary) !important;
 }
-
-.premium-car-card img{
-    height: 356px;
+.img-container img{
+     
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    max-height: 100%;
 } 
 #car-address-img{
     display: inline;
@@ -313,17 +353,24 @@ body {
  
 .contact-owner .fa-whatsapp{
     font-size: 20px;
-    color: lightgreen;
+    color: rgb(12, 240, 12);
     font-weight: 700;
 }
 .contact-owner .fa-phone{
     font-size: 20px;
-    color: var(--primarycolor);
+    color: var(--bgprimary);
+}
+.car-page-nav a:link{
+    text-decoration: none;
+}
+.admin-content{
+    border: 1px solid var(--bgprimary);
+    border-radius: 5px;
 }
 
 @media only screen and (min-width: 800px) {
     .premium-car-card{
-        height: 356px !important;
+        /* height: 356px !important; */
         width: 100%;
     }
 }
@@ -339,16 +386,55 @@ body {
 /*================================================================
 ============= User signin form styling =========================
 =================================================================*/
+.text-quinary{
+    color: var(--quinarycolor);
+}
 .user-signin-form{
-    height: 100vh;
-    border: 1px solid green;
-    
+    padding: 0 0 100px;
 }
-.signinform{
-    border: 1px solid red;
-    padding: 2rem;
+.signin-form-header, .forgotpwd-header{
+    margin-top: 5rem;
+    color: var(--quinarycolor);
+}
+.fa-thumbs-up, .fa-user-shield{
+    font-size: 40px;   
+}
+
+.user-signin-form input, .user-signin-form span{
+    background-color: var(--senarycolor);
+    border-color: var(--senarycolor);
+}
+.user-signin-form input:focus{
+    box-shadow: none;
+    border: 1px solid var(--quinarycolor);   
+}
+#userSigninBtn{
+    background-color: var(--quinarycolor);
+    border-style: none;
+    padding: 10px;
+    color: var(--secondarycolor);
+}
+#forgotPwdBtn{
+    background-color: var(--quinarycolor);
+    color: var(--secondarycolor);
+    padding: 5px;
+}
+.input-group-text i{
+    color: var(--quinarycolor);
+}
+
+/*================================================================
+============= User signup form styling =========================
+=================================================================*/
+#userSignupBtn{
+    background-color: var(--quinarycolor);
+    border-style: none;
+    padding: 10px;
+    color: var(--secondarycolor);
+}
+
  
-}
+ 
  
 
  
@@ -358,6 +444,10 @@ body {
 
 .footer-copyright{
     background-color: var(--bgquaternary);
+}
+.company-link{
+    color: var(--quinarycolor);
+    text-decoration: none;
 }
 
 

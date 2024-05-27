@@ -11,3 +11,7 @@ $routes->get('city', 'Home::featuredCity');
 
 $routes->get('signin', 'Home::userSignin');
 
+$routes->get('signup', 'Home::userSignup');
+
+ 
+

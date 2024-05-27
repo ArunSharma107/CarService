@@ -1,0 +1,12 @@
+CRITICAL - 2024-05-23 03:10:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "user_signin.php"
+[Method: GET, Route: signin]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user_signin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_signin', [], true)
+ 3 APPPATH\Controllers\Home.php(17): view('user_signin')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->userSignin()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

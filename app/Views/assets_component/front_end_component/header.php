@@ -15,12 +15,7 @@
     <link rel="stylesheet" href="<?= base_url('public/assets/css/fontawesome.min.css'); ?>">
     <!-- swiper css file -->
     <link rel="stylesheet" href="<?= base_url('public/assets/css/swiper-bundle.min.css'); ?>">
-     <!-- Link Swiper's CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-
- 
-
-
+  
 </head>
 
 <body>

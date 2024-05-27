@@ -1,16 +1,17 @@
-<!-- Including Header and navbar section -->
-<?php 
-include('assets_component/front_end_component/header.php');
-include('assets_component/front_end_component/navbar.php'); 
-?>
+<!-- Codeinginter(CI) function to extend main_site_layout -->
+<?= $this->extend('layouts/main_site_layout') ?>
+
+
+<!-- CI function to use main-content section -->
+<?= $this->section('main-content') ?>
 
 <!-- Search section starts here  -->
 <section class="hero-section-featured-city">
     <div class="px-4 py-5 text-center">
-        <section class="search-section my-5 container">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <section class="search-section my-5 container-fluid">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <div class="input-group input-group-lg">
-                    <input class="form-control rounded-pill" id="searchBar" type="search" value="Search.."
+                    <input class="form-control rounded-pill" id="searchBar" type="search" value="Search..."
                         autocomplete="off">
                     <span class="input-group-append">
                         <button class="btn btn-lg  rounded-pill" id="searchBtn" type="button">
@@ -18,7 +19,7 @@ include('assets_component/front_end_component/navbar.php');
                         </button>
                     </span>
                 </div>
-                
+
 
             </div>
         </section>
@@ -43,7 +44,7 @@ include('assets_component/front_end_component/navbar.php');
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-2">
 
                         <div class="input-group input-group-lg">
-                            <input class="form-control" id="" type="search" placeholder="Search here"
+                            <input class="form-control" id="dropdownSrcBar" type="search" placeholder="Search here"
                                 autocomplete="off">
                             <span class="input-group-append">
                                 <button class="btn btn-lg bg-white" id="srchBtn" type="button">
@@ -106,7 +107,9 @@ include('assets_component/front_end_component/navbar.php');
 
                 <div class="section_title mb-2">
                     <span>
-                        <h2 class="title_text"> Top premium cars in cityname</h2>
+                        <h2 class="title_text">
+                            <span class="title_sub">Exclusive cars in cityname</span>
+                        </h2>
 
                     </span>
                 </div>
@@ -154,9 +157,59 @@ include('assets_component/front_end_component/navbar.php');
                                     </a>
                                 </div>
 
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/ambasador.jpg') ?>"
+                                            class="img-fluid" alt="Ambasador">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/aston-martin.jpg') ?>"
+                                            class="img-fluid" alt="AstonMartin">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/jaguar.jpg') ?>"
+                                            class="img-fluid" alt="Jaguar">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/mercedes-benz.jpg') ?>"
+                                            class="img-fluid" alt="Mercedes Benz">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/transformer.jpg') ?>"
+                                            class="img-fluid" alt="Bumble Bee">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>"
+                                            class="img-fluid" alt="Porsche">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/range-rover.jpg') ?>"
+                                            class="img-fluid" alt="Range Rover">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/rolls-royce.jpg') ?>"
+                                            class="img-fluid" alt="Rolls Royce">
+                                    </a>
+                                </div>
 
 
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
                         <!-- swiper slider ends -->
@@ -168,163 +221,194 @@ include('assets_component/front_end_component/navbar.php');
     </div>
 </section>
 
-<!-- Top-premium car card starts here -->
+<!-- Exclusive car ads starts here -->
 <section class="top-premium-car-section mt-5">
     <div class="container">
+        <div class="section_title">
+            <h2 class="title_text">
+                <span class="title_sub">Exclusive Cars</span>
+            </h2>
+        </div>
         <div class="card topPremiumCarCard">
             <div class="row">
-                <div class="col-md-3">
-                    <img src="<?= base_url('public/assets/images/cars/car-front.webp');  ?>" alt="Lamboarghini" class="card-img-top img-fluid">
+                <div class="slider-container">
+                    <div class="container">
+                        <!-- swiper slider starts -->
+                        <div class="swiper exclusiveCarSwiper mt-4">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/car-front.webp');  ?>"
+                                            alt="Lamboarghini" class="card-img-top img-fluid">
+                                    </a>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/car-back.webp');  ?>"
+                                            alt="Lamboarghini" class="card-img-top img-fluid">
+
+                                    </a>
+
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/car-side.webp');  ?>"
+                                            alt="Lamboarghini" class="card-img-top img-fluid">
+                                    </a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/car-interior.webp');  ?>"
+                                            alt="Lamboarghini" class="card-img-top img-fluid">
+                                    </a>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination text-info"></div>
+                        </div>
+                        <!-- swiper slider ends -->
+
+                    </div>
                 </div>
-                <div class="col-md-3">
-                <img src="<?= base_url('public/assets/images/cars/car-back.webp');  ?>" alt="Lamboarghini" class="card-img-top img-fluid">
-                </div>
-                <div class="col-md-3">
-                <img src="<?= base_url('public/assets/images/cars/car-side.webp');  ?>" alt="Lamboarghini" class="card-img-top img-fluid">
-                </div>
-                <div class="col-md-3">
-                <img src="<?= base_url('public/assets/images/cars/car-interior.webp');  ?>" alt="Lamboarghini" class="card-img-top img-fluid">
-                </div>
+
             </div>
             <div class="row">
                 <div class="col-12">
-                <div class="card-body">
-                             <h5 class="text-center">
-                                 <span
-                                      class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
-                                      Lamborghine Gold</span>
-                             </h5>
-                            <p class="card-text text-center">
-                                 <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">
-                                     <i class="fa-solid fa-gauge"></i> 200 Km</span>
-                                 <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">
-                                    <i class="fa-solid fa-gas-pump"></i> Diesel</span>
-                                 <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">
-                                     <i class="fa-solid fa-tag"></i> 20Lakh</span>
-
-                             </p>
-                             <p class="card-text text-center"><small class="text-muted">
-                                <i class="fa-solid fa-location-dot"></i>
-                                123 Agra agartala India
-                                <img src="<?= base_url('public/assets/images/nations flag/india-logo.png'); ?>"
-                                    alt="Indian logo" id="car-address-img">
-                            </small></p>
-
-                             <p class="card-text">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima similique neque dolores quae nulla qui, aliquid ex eum praesentium soluta minus maxime est aspernatur quas dicta, et, mollitia nemo magni voluptates ut consequatur! Blanditiis molestiae, dolor optio amet recusandae excepturi ea, quae aliquam et sequi quidem dignissimos quisquam in omnis exercitationem. Magni corporis reiciendis eum, assumenda nostrum ipsa nesciunt, consectetur fugit ducimus, esse numquam! Odio minima beatae sed ducimus consectetur culpa, labore officiis quam cum eum maiores a? Sit numquam incidunt natus corrupti similique soluta fugiat pariatur harum placeat atque commodi temporibus facilis dolor fugit vero, est eligendi nulla perspiciatis.</p>
-
-                             <div class="contact-owner">
-                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-solid fa-phone"></i></a>
-                            </div>
-
-
-                         </div>
-                </div>
-            </div>
-  
-        </div>
-    </div>
-</section>
-<!-- Top-premium car card ends here -->
-
-
-<!-- Premium car section starts here -->
-<section class="premium-car-section">
-    <div class="container">
-        <div class="card premium-car-card">
-            <div class="row ">
-                <div class="col-md-4">
-                    <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>" class="img-fluid rounded-start"
-                        alt="Mustang">
-                    <span
-                        class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill carPrice">
-                        <i class="fa-solid fa-tag"></i> Rs. 70Lakh</span>
-                        <span
-                        class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill carImages">
-                        <i class="fa-solid fa-image"></i> +5</span>
-                </div>
-                <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">The best cars in cityname</h5>
-                        <p class="card-text mt-3">
+
+
+
+                        <h5 class="card-title">Exclusive car heading - Lorem ipsum dolor sit amet.</h5>
+
+                        <p class="card-text car-page-nav"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima similique
+                            neque dolores quae nulla qui, aliquid ex eum praesentium soluta minus maxime est aspernatur
+                            quas dicta, et, mollitia nemo magni voluptates ut consequatur! Blanditiis molestiae, dolor
+                            optio amet recusandae excepturi ea, quae aliquam et sequi quidem dignissimos quisquam in
+                            omnis exercitationem. Magni corporis reiciendis eum, assumenda nostrum ipsa nesciunt <a
+                                href="#">...</a></p>
+                        <h5 class="text-left">
                             <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
-                                Mustang XI</span>
-                        </p>
-                        <p class="card-text">
-                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill"> <i
-                                    class="fa-solid fa-gauge"></i> 50,000 Km</span>
-                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill"> <i
-                                    class="fa-solid fa-gas-pump"></i> Petrol</span>
-                        </p>
-                        <p class="car-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam consectetur magnam
-                            ad voluptatem sit illo laudantium fugiat iure aliquam in, autem labore exercitationem
-                            eveniet quas incidunt aut voluptatum voluptatibus voluptate officia eos. Unde tempore
-                            laboriosam ex. Corporis, laborum quo. Iste rem dolore fugiat autem reiciendis ullam unde
-                            quidem maiores.
-                        </p>
-                        <p class="card-text"><small class="text-muted">
+                                Lamborghine Gold</span>
+                        </h5>
+                        <p class="card-text text-left"><small
+                                class="text-muted badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">
                                 <i class="fa-solid fa-location-dot"></i>
-                                123 Agra agartala India
+                                cityname
                                 <img src="<?= base_url('public/assets/images/nations flag/india-logo.png'); ?>"
                                     alt="Indian logo" id="car-address-img">
                             </small></p>
 
 
                         <div class="contact-owner">
-                        
-                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-solid fa-phone"></i></a>
-                             
-                             
- 
+                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i
+                                    class="fa-solid fa-phone"></i></a>
                         </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Exclusive car card ends here -->
+
+
+<!-- Premium car ads section starts here -->
+<section class="exclusive-car-section mt-5">
+    <div class="container">
+        <div class="section_title">
+            <h2 class="title_text">
+                <span class="title_sub">Premium Cars</span>
+            </h2>
+        </div>
+        <div class="card premium-car-card">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-container">
+                        <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>"
+                            class="img-fluid rounded-start" alt="Mustang">
+
+                        <span
+                            class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill carImages">
+                            <i class="fa-solid fa-image"></i> +5</span>
+
+                    </div>
+
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium cars heading - Lorem ipsum dolor sit.</h5>
+
+
+                        <p class="car-description car-page-nav card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam consectetur magnam
+                            ad voluptatem sit illo laudantium fugiat iure aliquam in, autem labore exercitationem
+                            eveniet quas incidunt aut voluptatum voluptatibus voluptate officia eos. Unde tempore <a
+                                href="#">...</a></p>
+                        </p>
+
+                        <p class="card-text mt-3">
+                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
+                                Mustang XI</span>
+                        </p>
+
+
+
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 </section>
 
-<!-- less premium car section starts here -->
-<section class="less-premium-car-section mt-4">
+<!-- Standard car section starts here -->
+<section class="less-premium-car-section mt-5">
     <div class="container">
+        <div class="section_title">
+            <h2 class="title_text">
+                <span class="title_sub">Standard Cars</span>
+            </h2>
+        </div>
         <div class="card premium-car-card">
             <div class="row g-0">
 
                 <div class="col-md-12">
+
                     <div class="card-body">
-                        <h5 class="card-title">The best cars in cityname</h5>
-                        <p class="card-text mt-3">
-                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
-                                Mustang XI</span>
-                        </p>
-                        <p class="card-text">
-                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill"> <i
-                                    class="fa-solid fa-gauge"></i> 50,000 Km</span>
-                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill"> <i
-                                    class="fa-solid fa-gas-pump"></i> Petrol</span>
-                        </p>
-                        <p class="car-description">
+                        <h5 class="card-title">Standard cars heading - The best cars in cityname</h5>
+
+
+
+                        <p class="car-description car-page-nav card-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam consectetur magnam
                             ad voluptatem sit illo laudantium fugiat iure aliquam in, autem labore exercitationem
                             eveniet quas incidunt aut voluptatum voluptatibus voluptate officia eos. Unde tempore
-                            laboriosam ex. Corporis, laborum quo. Iste rem dolore fugiat autem reiciendis ullam unde
-                            quidem maiores.
+                            <a href="#">...</a>
                         </p>
-                        <p class="card-text"><small class="text-muted">
-                                <i class="fa-solid fa-location-dot"></i>
-                                123 Agra agartala India
-                                <img src="<?= base_url('public/assets/images/nations flag/india-logo.png'); ?>"
-                                    alt="Indian logo" id="car-address-img">
-                            </small></p>
+                        <p class="card-text mt-3">
+                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2016
+                                Mustang XI</span>
+                        </p>
 
-
-                        <div class="contact-owner">
-                        <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a class="btn btn-light btn-floating m-1" href="#!" role="button"><i class="fa-solid fa-phone"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -334,40 +418,95 @@ include('assets_component/front_end_component/navbar.php');
 </section>
 
 <!-- top premium cars swiper starts here -->
-<section class="top-premium-cars-swiper">
+<section class="top-premium-cars-swiper mt-5">
     <div class="container mt-5">
 
         <div class="swiper footerPremiumCarSwiper">
 
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/audi.jpg') ?>" class="img-fluid" alt="audi"
-                        width="30" height="30" />
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>" class="img-fluid"
+                            alt="Bugatti">
+                    </a>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/jeep.jpg') ?>" class="img-fluid" alt="Jeep">
+
+                    </a>
+
                 </div>
 
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/lamboarghini.jpg') ?>" class="img-fluid"
-                        alt="Lamborghini">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/lamboarghini.jpg') ?>" class="img-fluid"
+                            alt="Lamborghini">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/audi.jpg') ?>" class="img-fluid" alt="audi">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>" class="img-fluid"
+                            alt="Mustang">
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/ambasador.jpg') ?>" class="img-fluid"
+                            alt="Ambasador">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/jeep.jpg') ?>" class="img-fluid" alt="Jeep">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/aston-martin.jpg') ?>" class="img-fluid"
+                            alt="AstonMartin">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>" class="img-fluid" alt="Bugatti">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/jaguar.jpg') ?>" class="img-fluid"
+                            alt="Jaguar">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>" class="img-fluid" alt="Mustang">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/mercedes-benz.jpg') ?>" class="img-fluid"
+                            alt="Mercedes Benz">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>" class="img-fluid" alt="Porsche">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/transformer.jpg') ?>" class="img-fluid"
+                            alt="Bumble Bee">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/range-rover.jpg') ?>" class="img-fluid"
-                        alt="Range Rover">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>" class="img-fluid"
+                            alt="Porsche">
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="<?= base_url('public/assets/images/cars/rolls-royce.jpg') ?>" class="img-fluid"
-                        alt="Rolls Royce">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/range-rover.jpg') ?>" class="img-fluid"
+                            alt="Range Rover">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="<?= base_url('public/assets/images/cars/rolls-royce.jpg') ?>" class="img-fluid"
+                            alt="Rolls Royce">
+                    </a>
                 </div>
 
             </div>
@@ -379,23 +518,52 @@ include('assets_component/front_end_component/navbar.php');
 <!-- pagination starts here -->
 <nav aria-label="Page navigation example" class="mt-5 p-2">
     <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-            <a class="page-link">Previous</a>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
         </li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
         </li>
     </ul>
 </nav>
+<!-- pagination ends here -->
 
- 
+<!-- empty space for the admin to write someting -->
+<section class="mt-5 p-5">
+    <div class="container admin-content p-5">
+
+        <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero praesentium quod amet iste illum animi
+            culpa, eos odio delectus ipsum voluptatem ullam laudantium dolore repudiandae esse necessitatibus repellat
+            tempora impedit? Asperiores iusto amet nostrum doloribus voluptatum quidem quas tempore corporis, expedita
+            cumque atque cupiditate dolores dolorum et quis possimus commodi.
+        </p>
 
 
-<!-- Including footer section -->
-<?php
-include('assets_component/front_end_component/footer.php');
-include('assets_component/front_end_component/last_link_page.php');
-?>
+    </div>
+</section>
+
+<?= $this->endSection() ?>
+
+<?=  $this->section('scripts') ?>
+<script>
+// search bar toggle dependent dropdown 
+const inputBox = document.getElementById('searchBar');
+const element = document.getElementById('dropdownSearch');
+
+inputBox.addEventListener("click", () => {
+    element.classList.remove('d-none');
+    inputBox.setAttribute('value', '');
+
+});
+</script>
+
+
+<?= $this->endSection() ?>
