@@ -6,10 +6,11 @@ window.onload = () => {
 
 // initailising car swiper of featured city page
 var swiper = new Swiper(".carSwiper", {
-    slidesPerView: 10,
+     
     loop: true,
-    cssMode: true,
-    spaceBetween: 20,
+    grabCursor: true,
+    
+     
     autoplay: {
         delay: 1500,
         disableOnInteraction: false,
@@ -21,15 +22,29 @@ var swiper = new Swiper(".carSwiper", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    }
+    },
+    breakpoints: {
+      340: {
+        slidesPerView: 5,
+        spaceBetween: 5,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+    },
      
 });
 
 // initialising exclisveCarSwiper
 var swiper = new Swiper(".exclusiveCarSwiper", {
-  slidesPerView: 3,
+  slidesPerView: 4,
   loop: true,
-  cssMode: true,
+   
   spaceBetween: 20,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -41,17 +56,18 @@ var swiper = new Swiper(".exclusiveCarSwiper", {
     clickable: true,
   },
   breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+    300: {
+      slidesPerView: 3,
+      spaceBetween: 5,
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    1024: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      spaceBetween: 20,
+    },
+    800: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
     },
   },
 });
@@ -63,13 +79,14 @@ var swiper = new Swiper(".exclusiveCarSwiper", {
 var swiper = new Swiper(".footerPremiumCarSwiper", {
   effect: "coverflow",
       grabCursor: true,
-      slidesPerView: 5,
+      slidesPerView: 4,
+      spaceBetween: 10,
       loop: true,
       // cssMode: true,
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
-        depth: 80,
+        depth: 70,
         modifier: 1,
         slideShadows: true,
       },

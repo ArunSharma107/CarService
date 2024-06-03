@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarServices</title>
+    <title>
+        <?= $this->renderSection('page-title')?>
+    </title>
 
     <!-- custom css file -->
     <link rel="stylesheet" href="<?= base_url('public/assets/css/frontstyle.css'); ?>">
@@ -28,19 +30,22 @@
                     <img src="<?= base_url('public/assets/images/logo/carlogo.png'); ?>" alt="car logo"
                         class="img-fluid rounded-circle border">
                 </div>
-
+                 
                 <div class="post-add-btn">
-                    <a href="<?= base_url('/signin'); ?>">
-                        <button class="btn btn-secondary btn-small">
+                    <a href="<?= base_url('/signup'); ?>">
+                        <button class="btn btn-secondary btn-small btn-dark">
                             <i class="fa-solid fa-rectangle-ad"></i>
                             <span>
+                                <b>
                                 Post Your Add
+                                </b>
                             </span>
 
 
                         </button>
                     </a>
                 </div>
+ 
 
 
             </div>
@@ -59,8 +64,8 @@
     <!-- footer starts here -->
     <div class="container mt-5">
         <footer class=" py-3 my-4 border-top">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 mb-5">
+            <div class="row align-items-center">
+                <div class="col mb-5">
                     <div class="section_title text-center mb-3">
                         <h4 class="title_text_sm ">
                             Terms & Conditions
@@ -73,7 +78,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-md-3 col-lg-3 mb-5">
+                <div class="col mb-5">
                     <div class="section_title text-center mb-3">
                         <h4 class="title_text_sm ">
                             Privacy Ploicy
@@ -86,7 +91,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-md-3 col-lg-3 mb-5">
+                <div class="col mb-5">
                     <div class="section_title text-center mb-3">
                         <h4 class="title_text_sm ">
                             Contact Us
@@ -99,23 +104,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-md-3 col-lg-3 mb-5">
-                    <div class="section_title text-center mb-3">
-                        <h4 class="title_text_sm ">
-                            Promote Your Ads
-                        </h4>
-                    </div>
-                    <div class="text-center">
-                        <a href="<?= base_url('/signin'); ?>">
-                            <button class="btn btn-outline-secondary">
+                <?= $this->renderSection('footer-cta')?>
 
-                                <i class="fa-solid fa-rectangle-ad"></i>
-                                Promote Your Ads
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
+                
             </div>
     </div>
     <div class="row">
@@ -141,8 +132,8 @@
 
     <!-- Copyright -->
     <div class="text-center p-3 footer-copyright">
-        © 2024 Copyright:
-        <a class="company-link" href="#">CarServices.com</a>
+        <!-- © 2024 Copyright:
+        <a class="company-link" href="#">CarServices.com</a> -->
     </div>
     <!-- Copyright -->
 
@@ -177,7 +168,7 @@
 
     <!-- bootstrap 5 bundle with popper -->
     <script src="<?= base_url('public/assets/js/bootstrap.bundle.min.js'); ?> "></script>
-    <!-- jQurty file -->
+    <!-- jQurey file -->
     <script src="<?= base_url('public/assets/js/jquery.min.js'); ?>"></script>
     <!-- swiper file -->
     <script src="<?= base_url('public/assets/js/swiper-bundle.min.js'); ?>"></script>

@@ -9,6 +9,10 @@ Developed by : Arun Sharma
 <!-- Codeigniter function to extend main_site_layout -->
 <?=  $this->extend('layouts/main_site_layout')  ?>
 
+<?=  $this->section('page-title') ?>
+CarSales | Featured Countries
+<?= $this->endSection() ?>
+
 
 <?=  $this->section('main-content') ?>
 <!-- hero section starts here -->
@@ -17,12 +21,12 @@ Developed by : Arun Sharma
         <h1 class="hero-heading">Welcome To CarServices</h1>
         <div class="col-lg-6 mx-auto">
             <p class="subheading mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="d-grid d-flex justify-content-center">
+            <!-- <div class="d-grid d-flex justify-content-center">
                 <button type="button" class="btn btn-danger btn-lg px-4">
                     <i class="fas fa-user-plus"></i>
-                    SignUp / Login</button>
-                <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-            </div>
+                    SignUp / Login</button> -->
+            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
+            <!-- </div> -->
         </div>
     </div>
 </section>
@@ -40,8 +44,63 @@ Developed by : Arun Sharma
                     </h2>
                 </div>
 
-                <!-- country 1- Canada -->
-                <div class="dropdown">
+                <?php if($country):?>
+                <?php foreach ($country as $row): ?>
+                
+                    <div class="dropdown">
+                        <div class="feature-country" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-lg w-100 dropdown-toggle " type="button">
+                                <div class="country-img-container">
+                                    <img src="http://localhost/Projects/CarService/public/assets/images/nations-flag/<?= $row['country_image']; ?>"
+                                        alt="canada-logo" class="img-fluid rounded-circle border border-secondary">
+                                </div>
+                                <div class="country-name text-capitalize"><?= $row['country_name']; ?></div>
+                               
+                               
+                                
+                                 
+
+                            </button>
+
+                        </div>
+               
+                
+                    <ul class="dropdown-menu container states-name-dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="<?= base_url('/city/'.$row['country_id']); ?>">
+                                <img src="<?= base_url('public/assets/images/canada-cities/abbotsford.jpg'); ?>"
+                                    alt="Abbotsford" class="img-fluid state-img">
+                                <span class="state-name">Abbotsford</span>
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="<?= base_url('public/assets/images/canada-cities/barrie.jpg'); ?>"
+                                    alt="Barrie" class="img-fluid state-img">
+                                <span class="state-name">Barrie</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="<?= base_url('public/assets/images/canada-cities/brandon.jpg'); ?>"
+                                    alt="Brandon" class="img-fluid state-img">
+                                <span class="state-name">Brandon</span>
+
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <?php endforeach; ?>
+            <?php endif;?>
+
+
+
+            <!-- country 1- Canada -->
+            <!-- <div class="dropdown">
                     <div class="feature-country" data-bs-toggle="dropdown" aria-expanded="false">
                         <button class="btn btn-lg w-100 dropdown-toggle " type="button">
                             <div class="country-img-container">
@@ -81,10 +140,10 @@ Developed by : Arun Sharma
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
-                <!-- country 2- India -->
-                <div class="dropdown">
+            <!-- country 2- India -->
+            <!-- <div class="dropdown">
                     <div class="feature-country" data-bs-toggle="dropdown" aria-expanded="false">
                         <button class="btn btn-lg w-100 dropdown-toggle " type="button">
                             <div class="country-img-container">
@@ -124,10 +183,10 @@ Developed by : Arun Sharma
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
-                <!-- country 3- Singapore -->
-                <div class="dropdown">
+            <!-- country 3- Singapore -->
+            <!-- <div class="dropdown">
                     <div class="feature-country" data-bs-toggle="dropdown" aria-expanded="false">
                         <button class="btn btn-lg w-100 dropdown-toggle " type="button">
                             <div class="country-img-container">
@@ -167,10 +226,10 @@ Developed by : Arun Sharma
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
-                <!-- country 4- United Kingdom -->
-                <div class="dropdown">
+            <!-- country 4- United Kingdom -->
+            <!-- <div class="dropdown">
                     <div class="feature-country" data-bs-toggle="dropdown" aria-expanded="false">
                         <button class="btn btn-lg w-100 dropdown-toggle " type="button">
                             <div class="country-img-container">
@@ -210,13 +269,14 @@ Developed by : Arun Sharma
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
-            </div>
         </div>
+    </div>
 
     </div>
 </section>
+
 <!-- featured country section ends here -->
 
 <?= $this->endSection() ?>

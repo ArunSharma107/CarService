@@ -1,6 +1,10 @@
 <!-- Codeinginter(CI) function to extend main_site_layout -->
 <?= $this->extend('layouts/main_site_layout') ?>
 
+<?=  $this->section('page-title') ?>
+CarSales-Cityname
+<?= $this->endSection() ?>
+
 
 <!-- CI function to use main-content section -->
 <?= $this->section('main-content') ?>
@@ -28,7 +32,7 @@
             <div class="container mt-5">
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-2">
                         <div class="form-floating">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option selected>Four Wheel Drive</option>
@@ -41,7 +45,7 @@
 
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 mt-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mt-2">
 
                         <div class="input-group input-group-lg">
                             <input class="form-control" id="dropdownSrcBar" type="search" placeholder="Search here"
@@ -60,7 +64,7 @@
 
                 <div class="row justify-content-center">
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 mt-2">
 
                         <div class="form-floating">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
@@ -73,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 mt-2">
                         <div class="form-floating">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option selected>Agartala</option>
@@ -119,92 +123,126 @@
                         <div class="swiper carSwiper">
                             <div class="swiper-wrapper">
 
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
-                                            class="img-fluid" alt="Bugatti">
-                                    </a>
-                                </div>
-
 
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/jeep.jpg') ?>"
-                                            class="img-fluid" alt="Jeep">
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
 
-                                    </a>
-
+                                            </div>
+                                        </div>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/lamboarghini.jpg') ?>"
-                                            class="img-fluid" alt="Lamborghini">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/audi.jpg') ?>"
-                                            class="img-fluid" alt="audi">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>"
-                                            class="img-fluid" alt="Mustang">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/ambasador.jpg') ?>"
-                                            class="img-fluid" alt="Ambasador">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/aston-martin.jpg') ?>"
-                                            class="img-fluid" alt="AstonMartin">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/jaguar.jpg') ?>"
-                                            class="img-fluid" alt="Jaguar">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/mercedes-benz.jpg') ?>"
-                                            class="img-fluid" alt="Mercedes Benz">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/transformer.jpg') ?>"
-                                            class="img-fluid" alt="Bumble Bee">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>"
-                                            class="img-fluid" alt="Porsche">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/range-rover.jpg') ?>"
-                                            class="img-fluid" alt="Range Rover">
-                                    </a>
+                                        <div class="card shadow mx-auto topCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img src="<?= base_url('public/assets/images/cars/rolls-royce.jpg') ?>"
-                                            class="img-fluid" alt="Rolls Royce">
-                                    </a>
-                                </div>
+
+
+                                 
+
+
+                                
+
+                                
+
+                                 
 
 
                             </div>
@@ -224,12 +262,9 @@
 <!-- Exclusive car ads starts here -->
 <section class="top-premium-car-section mt-5">
     <div class="container">
-        <div class="section_title">
-            <h2 class="title_text">
-                <span class="title_sub">Exclusive Cars</span>
-            </h2>
-        </div>
+
         <div class="card topPremiumCarCard">
+            <div class="ribbon red"><span>Exclusive</span></div>
             <div class="row">
                 <div class="slider-container">
                     <div class="container">
@@ -268,6 +303,16 @@
                                     </a>
                                 </div>
 
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="<?= base_url('public/assets/images/cars/jaguar.jpg');  ?>"
+                                            alt="Lamboarghini" class="card-img-top img-fluid">
+                                    </a>
+                                </div>
+
+
+
+
 
 
 
@@ -289,15 +334,14 @@
 
 
 
-                        <h5 class="card-title">Exclusive car heading - Lorem ipsum dolor sit amet.</h5>
+                        <h5 class="card-title">Exclusive car heading - Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit. Dolores deleniti askwer</h5>
 
-                        <p class="card-text car-page-nav"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class="card-text car-page-nav mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Minima similique
                             neque dolores quae nulla qui, aliquid ex eum praesentium soluta minus maxime est aspernatur
                             quas dicta, et, mollitia nemo magni voluptates ut consequatur! Blanditiis molestiae, dolor
-                            optio amet recusandae excepturi ea, quae aliquam et sequi quidem dignissimos quisquam in
-                            omnis exercitationem. Magni corporis reiciendis eum, assumenda nostrum ipsa nesciunt <a
-                                href="#">...</a></p>
+                            optio amet recusandae excepturi ea, quae aliquam et sequi <a href="#">...</a></p>
                         <h5 class="text-left">
                             <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
                                 Lamborghine Gold</span>
@@ -306,7 +350,7 @@
                                 class="text-muted badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">
                                 <i class="fa-solid fa-location-dot"></i>
                                 cityname
-                                <img src="<?= base_url('public/assets/images/nations flag/india-logo.png'); ?>"
+                                <img src="<?= base_url('public/assets/images/nations-flag/india-logo.png'); ?>"
                                     alt="Indian logo" id="car-address-img">
                             </small></p>
 
@@ -332,14 +376,12 @@
 <!-- Premium car ads section starts here -->
 <section class="exclusive-car-section mt-5">
     <div class="container">
-        <div class="section_title">
-            <h2 class="title_text">
-                <span class="title_sub">Premium Cars</span>
-            </h2>
-        </div>
+
         <div class="card premium-car-card">
+            <div class="ribbon"><span>Premium</span></div>
+
             <div class="row">
-                <div class="col-md-4">
+                <div class="col">
                     <div class="img-container">
                         <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>"
                             class="img-fluid rounded-start" alt="Mustang">
@@ -351,21 +393,26 @@
                     </div>
 
                 </div>
-                <div class="col-md-8">
+                <div class="col">
                     <div class="card-body">
                         <h5 class="card-title">Premium cars heading - Lorem ipsum dolor sit.</h5>
 
 
                         <p class="car-description car-page-nav card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam consectetur magnam
-                            ad voluptatem sit illo laudantium fugiat iure aliquam in, autem labore exercitationem
-                            eveniet quas incidunt aut voluptatum voluptatibus voluptate officia eos. Unde tempore <a
-                                href="#">...</a></p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reprehenderit hic
+                            eligendi atque labore! <a href="#">...</a></p>
                         </p>
 
                         <p class="card-text mt-3">
                             <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill">2024
                                 Mustang XI</span>
+                        </p>
+                        <p class="card-text mt-3">
+                            <span class="badge text-secondary bg-secondary-subtle  border-secondary rounded-pill"><i
+                                    class="fa-solid fa-location-dot"></i>
+                                cityname
+                                <img src="<?= base_url('public/assets/images/nations-flag/india-logo.png'); ?>"
+                                    alt="Indian logo" id="car-address-img"></span>
                         </p>
 
 
@@ -389,6 +436,7 @@
             </h2>
         </div>
         <div class="card premium-car-card">
+            <div class="ribbon blue"><span>Standard</span></div>
             <div class="row g-0">
 
                 <div class="col-md-12">
@@ -424,90 +472,143 @@
         <div class="swiper footerPremiumCarSwiper">
 
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>" class="img-fluid"
-                            alt="Bugatti">
-                    </a>
-                </div>
 
-
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/jeep.jpg') ?>" class="img-fluid" alt="Jeep">
-
-                    </a>
-
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/lamboarghini.jpg') ?>" class="img-fluid"
-                            alt="Lamborghini">
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/audi.jpg') ?>" class="img-fluid" alt="audi">
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>" class="img-fluid"
-                            alt="Mustang">
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/ambasador.jpg') ?>" class="img-fluid"
-                            alt="Ambasador">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/aston-martin.jpg') ?>" class="img-fluid"
-                            alt="AstonMartin">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/jaguar.jpg') ?>" class="img-fluid"
-                            alt="Jaguar">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/mercedes-benz.jpg') ?>" class="img-fluid"
-                            alt="Mercedes Benz">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/transformer.jpg') ?>" class="img-fluid"
-                            alt="Bumble Bee">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>" class="img-fluid"
+            <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/porsche.jpg') ?>" class="img-fluid"
                             alt="Porsche">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/range-rover.jpg') ?>" class="img-fluid"
-                            alt="Range Rover">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?= base_url('public/assets/images/cars/rolls-royce.jpg') ?>" class="img-fluid"
-                            alt="Rolls Royce">
-                    </a>
-                </div>
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/transformer.jpg') ?>" class="img-fluid"
+                            alt="Bumble Bee">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/mercedes-benz.jpg') ?>" class="img-fluid"
+                            alt="Mercedes Benz">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/jaguar.jpg') ?>" class="img-fluid"
+                            alt="Jaguar">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/aston-martin.jpg') ?>" class="img-fluid"
+                            alt="AstonMartin">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/ambasador.jpg') ?>" class="img-fluid"
+                            alt="Ambasador">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/mustang.jpg') ?>" class="img-fluid"
+                            alt="Mustang">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/audi.jpg') ?>" class="img-fluid" alt="audi">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/lamboarghini.jpg') ?>" class="img-fluid"
+                            alt="Lamborghini">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/jeep.jpg') ?>" class="img-fluid" alt="Jeep">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                        <div class="card mx-auto bottomCarSlideCont">
+                                            <div class="card-body">
+                                            <img src="<?= base_url('public/assets/images/cars/bugatti.jpg') ?>"
+                                            class="img-fluid " alt="Bugatti">
+
+                                            </div>
+                                        </div>
+                                </div>
+
+
+                                 
+
+
+
+
+
+
+
+
+
+            
+                
+
+                
+
+                 
+
+                
+
+                 
+
+                
+                 
+                 
+                
+                 
+                 
 
             </div>
             <div class="swiper-pagination"></div>
@@ -535,7 +636,7 @@
 </nav>
 <!-- pagination ends here -->
 
-<!-- empty space for the admin to write someting -->
+<!-- empty space for the admin to write something -->
 <section class="mt-5 p-5">
     <div class="container admin-content p-5">
 
@@ -549,6 +650,34 @@
 
     </div>
 </section>
+
+
+
+<?= $this->endSection() ?>
+
+<?= $this->section('footer-cta') ?>
+<div class="col mb-5">
+    <div class="section_title text-center mb-3">
+        <h4 class="title_text_sm ">
+            Promote Your Ads
+        </h4>
+    </div>
+    <div class="text-center">
+        <a href="<?= base_url('/signup/'.$country['country_id']); ?>">
+            <button class="btn btn-outline-secondary">
+
+                <i class="fa-solid fa-rectangle-ad"></i>
+                Promote Your Ads
+            </button>
+        </a>
+    </div>
+
+
+</div>
+
+
+
+
 
 <?= $this->endSection() ?>
 
