@@ -173,6 +173,32 @@ class Admin extends BaseController
   
     }
 
+    public function viewCities(){
+        return view('admin_view_cities');
+    }
+
+    public function countryList(){
+        $country = new countryModel;
+        $data = $country->findAll();
+        $country = '';
+        if ($data) {
+            foreach($data as $row){
+                $country .= ' <option value="'.$row['country_id'].'">'.$row['country_name'].'</option>';
+            }
+
+            return $this->response->setJSON([
+                'error' => false,
+                'message' => $country
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'error' => false,
+                'message' => '<option value="0"> No records found in database</option>'
+            ]);
+        }
+
+    }
+
 
     public function adminLogout(){
         

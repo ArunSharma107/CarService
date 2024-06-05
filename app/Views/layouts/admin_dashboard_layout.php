@@ -23,7 +23,7 @@
     <!-- fontawesome css file -->
     <link rel="stylesheet" href="<?= base_url('public/assets/css/all.min.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/css/fontawesome.min.css'); ?>">
-     
+   
 
 
 </head>
@@ -100,8 +100,6 @@
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="<?= base_url('admin-add-countries');?>">Add
-                                    Countries</a></li>
 
                             <li class="pc-item"><a class="pc-link" href="<?= base_url('admin-view-countries');?>">View
                                     Countries</a></li>
@@ -117,7 +115,7 @@
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="#">Add Cities</a></li>
+                            <li class="pc-item"><a class="pc-link" href="<?= base_url('admin-view-cities');?>">View Cities</a></li>
                         </ul>
                     </li>
 
@@ -304,16 +302,11 @@
     <script src="<?= base_url('public/admin_assets/assets/js/plugins/feather.min.js');?>"></script>
     <script src="<?= base_url('public/admin_assets/assets/js/plugins/jquery.dataTables.min.js');?>"></script>
     <script src="<?= base_url('public/admin_assets/assets/js/plugins/dataTables.bootstrap5.min.js'); ?>"></script>
-
+    <script src="<?= base_url('public/admin_assets/assets/js/plugins/choices.min.js'); ?>"></script>
+    
     <!-- Write Custom jQery Scripts -->
     <?= $this->renderSection('admin-scripts') ?>
-
-
-
-
-
-
-
+    
 </body>
 <!-- [Body] end -->
 
