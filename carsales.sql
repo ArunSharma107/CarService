@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2024 at 10:10 AM
+-- Generation Time: Jun 06, 2024 at 03:16 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,12 +47,24 @@ INSERT INTO `admin` (`admin_id`, `admin_email`, `admin_password`) VALUES
 --
 
 CREATE TABLE `city_table` (
-  `city-id` int(11) NOT NULL,
-  `city-name` varchar(50) NOT NULL,
-  `city-image` varchar(255) NOT NULL,
-  `country-id` int(11) NOT NULL,
-  `created-at` timestamp NOT NULL DEFAULT current_timestamp()
+  `city_id` int(11) NOT NULL,
+  `city_name` varchar(50) NOT NULL,
+  `city_image` varchar(255) NOT NULL,
+  `country_id` int(11) NOT NULL,
+  `city_created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `city_table`
+--
+
+INSERT INTO `city_table` (`city_id`, `city_name`, `city_image`, `country_id`, `city_created_at`) VALUES
+(5, 'Agartala', '1717673659_387fd0eeec10eb4fc08e.jpg', 28, '2024-06-06 06:04:19'),
+(6, 'Ahmedabad', '1717673691_002fb490e805e64775fd.jpg', 28, '2024-06-06 06:04:51'),
+(7, 'Barrie', '1717673723_227e395c64ef189a6763.jpg', 3, '2024-06-06 06:05:23'),
+(8, 'Abbotsford', '1717673741_b020dd80f5ddac4ce638.jpg', 3, '2024-06-06 06:05:41'),
+(9, 'Brandon', '1717673754_1111526cf51ed1d39166.jpg', 3, '2024-06-06 06:05:54'),
+(10, 'Agra', '1717673788_1ab5388485ae2d40f3f6.jpg', 28, '2024-06-06 06:06:28');
 
 -- --------------------------------------------------------
 
@@ -75,18 +87,7 @@ INSERT INTO `country_table` (`country_id`, `country_name`, `country_image`, `cre
 (3, 'Canada', '1717247588_33de5abfd621091374d2.jpg', '2024-06-01 13:13:08'),
 (4, 'Singapore', '1717247730_dd8eebf3ba711497dc9b.png', '2024-06-01 13:15:30'),
 (5, 'United Kingdom', '1717348561_9790c3e0a219bdb5890d.png', '2024-06-02 17:16:01'),
-(6, 'Germany', '1717395803_86b9bdf6d7a8e61da192.jpg', '2024-06-03 06:23:23'),
-(8, 'kumar', '1717348207_c229d2bad837efc774fa.jpg', '2024-06-02 17:20:05'),
-(10, 'testing4', '1717248082_b8d359afc7179a838e0d.png', '2024-06-01 13:21:22'),
-(12, 'testing5', '1717248216_c79c47af03eaae7cc3dd.png', '2024-06-01 13:23:36'),
-(13, 'testing6', '1717348144_295161d084b978a07213.jpg', '2024-06-02 17:09:04'),
-(15, 'test2', '1717248863_486f81bee9366bf5721c.png', '2024-06-01 13:34:23'),
-(18, 'China', '1717398965_6d79c290e64b2587fd30.jpg', '2024-06-03 07:16:05'),
-(19, 'Turkeye', '1717395101_70e51e6a26f38b886396.jpg', '2024-06-03 06:11:41'),
-(20, 'Sri Lanka', '1717352415_b070ae0be412c8dce9fa.jpg', '2024-06-02 18:20:15'),
-(21, 'Pakistan', '1717352492_316c46a331f5337d7a4b.jpg', '2024-06-02 18:21:32'),
-(22, 'USA', '1717395176_cb9a2187808d94c710f5.jpg', '2024-06-03 06:12:56'),
-(23, 'Afghanistan', '1717395142_8ecb52d22227f3e5b0b0.jpg', '2024-06-03 06:12:22');
+(28, 'India', '1717673628_2e06c9998c4f374434a8.png', '2024-06-06 11:33:48');
 
 -- --------------------------------------------------------
 
@@ -117,8 +118,8 @@ ALTER TABLE `admin`
 -- Indexes for table `city_table`
 --
 ALTER TABLE `city_table`
-  ADD PRIMARY KEY (`city-id`),
-  ADD KEY `country-id` (`country-id`);
+  ADD PRIMARY KEY (`city_id`),
+  ADD KEY `city_table` (`country_id`);
 
 --
 -- Indexes for table `country_table`
@@ -147,13 +148,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `city_table`
 --
 ALTER TABLE `city_table`
-  MODIFY `city-id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `city_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `country_table`
 --
 ALTER TABLE `country_table`
-  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -169,7 +170,7 @@ ALTER TABLE `users`
 -- Constraints for table `city_table`
 --
 ALTER TABLE `city_table`
-  ADD CONSTRAINT `city_table_ibfk_1` FOREIGN KEY (`country-id`) REFERENCES `city_table` (`city-id`);
+  ADD CONSTRAINT `city_table` FOREIGN KEY (`country_id`) REFERENCES `country_table` (`country_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
