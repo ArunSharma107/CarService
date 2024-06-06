@@ -28,6 +28,18 @@ $routes->get('admin-delete-country/(:num)', 'Admin::deleteCountryInDb/$1');
 
 $routes->get('admin-view-cities', 'Admin::viewCities');
 $routes->get('admin-country-list', 'Admin::countryList');
+$routes->post('admin-add-city', 'Admin::addCityInDb');
+$routes->get('admin-city-data', 'Admin::citiesInDB');
+$routes->get('admin-fetch-city/(:num)', 'Admin::fetchCity/$1');
+$routes->post('admin-update-city', 'Admin::updateCityInDb');
+$routes->get('admin-delete-city/(:num)', 'Admin::deleteCityInDb/$1');
+
+$routes->get('admin-edit-profile', 'Admin::editProfile');
+
+
+
+
+
 
 
 

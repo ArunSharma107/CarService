@@ -134,7 +134,7 @@
                     </li>
 
                     <li class="pc-item">
-                        <a href="../widget/w_data.html" class="pc-link">
+                        <a href="#" class="pc-link">
                             <span class="pc-micon">
                                 <i class="ph-duotone ph-database"></i>
                             </span>
@@ -168,7 +168,7 @@
             <!-- [Mobile Media Block end] -->
             <div class="ms-auto">
                 <ul class="list-unstyled">
-                    <li class="dropdown pc-h-item">
+                    <!-- <li class="dropdown pc-h-item">
                         <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
                             <i class="ph-duotone ph-sun-dim"></i>
@@ -187,7 +187,7 @@
                                 <span>Default</span>
                             </a>
                         </div>
-                    </li>
+                    </li> -->
 
 
 
@@ -234,7 +234,7 @@
 
 
                                         <li class="list-group-item">
-                                            <a href="#" class="dropdown-item">
+                                            <a href="<?= base_url('admin-edit-profile'); ?>" class="dropdown-item">
                                                 <span class="d-flex align-items-center">
                                                     <i class="ph-duotone ph-user-circle"></i>
                                                     <span>Edit profile</span>
